@@ -1,0 +1,50 @@
+.feature {
+    background-color: $ele_bg;
+    &__intro{
+        @include breakpoint-up(large){
+            width:60%;
+        }
+    }
+    h2{
+        color: $ele_hl;
+    }
+    p{
+        color: $ele_cbg;
+        font-weight: bold;
+    }
+    &__grid{
+        @include breakpoint-up(medium){
+            display: flex;
+        }
+    }
+
+    &__item{
+        padding: 1rem;
+        background-color: $ele_cbg;
+        @include breakpoint-up(large){
+            flex: 1;
+        }
+    }
+
+    &__icon{
+        margin-bottom: 1.875rem;
+        @include breakpoint-up(large){
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__title{
+        font-size: 1.25rem;
+        font-weight: 800;
+        font-size: 2em;
+        color: $ele_ch;
+        margin-bottom: 0.5rem;
+        @include breakpoint-up(large){
+    }
+}
+
+    &__description{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,46 @@
+.hero{
+    @include breakpoint-up(large){
+        display: flex;
+        align-items: center;
+    }
+
+    &__image{ //hero image
+        background-image: url(../../images/1_yidNpuczPrbW0fWk1D8zCA.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+        border-radius: 2rem;
+        margin-right: 0.75rem;
+
+        @include breakpoint-up(large){
+            flex:3;
+            order: 2;
+            height: 100%;
+            // min-height: 41rem;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            // background-image: url();
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    }
+
+    &__text{
+        text-align: center;
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+        
+        p{
+            margin-bottom: 2.25rem;
+            line-height: 1.5;
+        }
+    }
+}
